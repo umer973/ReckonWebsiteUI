@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+/** HEADER **/
+.padding-0 {
+    padding: 0px;
+}
+.topbar .bckgrnd{
+   background-color: black;
+   height: auto;
+}
+.topbar .bckgrnd .col-lg-11{
+  margin:auto;
+}
+.topbar .top-info-left{
+  display: flex;
+  color:white;
+}
