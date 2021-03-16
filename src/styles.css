@@ -6,11 +6,36 @@
 .topbar .bckgrnd{
    background-color: black;
    height: auto;
+   padding: 5px;
 }
 .topbar .bckgrnd .col-lg-11{
-  margin:auto;
+   margin:auto;
+   display: flex;
 }
-.topbar .top-info-left{
-  display: flex;
+.topbar .top-info-left,
+.topbar .top-info-right{
   color:white;
+}
+.topbar .top-info-left span{
+   width: 5%;
+   text-align: center;
+}
+/*MEDIA QUERIES*/
+@media(min-width:768px){
+  .top-info-left{
+    width: 30%;
+  }
+  .topbar .top-info-right{
+    width: 70%;
+  }
+}
+@media(max-width: 767px){
+  .topbar .bckgrnd .col-lg-11{
+    display: initial;
+    text-align: center;
+  }
+  .top-info-left, .top-info-right{
+    display: initial;
+    width: initial;
+  }
 }
