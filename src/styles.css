@@ -20,7 +20,147 @@
    width: 5%;
    text-align: center;
 }
+/*---NAVBAR---*/
+.mynavbar{
+  margin-top: -16px;
+}
+.second-nav{
+  border-bottom: 1px solid #DBDCDE;
+}
+.second-nav .dsktp_logo img,
+.mynavbar .mob-logo{
+  max-width: 45%;
+}
+.second-nav .dsktp_logo{
+  text-align: center;
+}
+.second-nav #nav{
+  justify-content: center;
+}
+.mynavbar .navbar-toggler{
+  color:#cdc9c9;
+  border-color: transparent;
+}
+ /*menubar*/
+#nav 
+  {
+    list-style: none inside;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  #nav li {
+    display: inline-block;
+    position: relative;
+  }
+  #nav li a {
+    padding: 0px 20px 0px 20px;
+    width: auto;
+    display: block;
+    text-transform: none;
+    text-decoration: none;
+    text-align: center;
+    border: 0;
+    border-radius: 0;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: normal;
+    outline: none;
+    cursor: pointer;
+    color: black;
+  }
+  /* smaller font size for sub menu items */
+  #nav a:hover {
+    color:#cdc9c9; 
+  }
+  /* highlights current hovered list item and the parent list items when hovering over sub menues */
+  #nav ul {
+    position: absolute;
+    padding: 0;
+    left: 0;
+    top:30px;
+    display: none;
+    z-index: 999;
+    display: none;
+    max-width: none;
+    border: 0;
+    background: #fff;
+    border-radius: 0;
+    box-shadow: 0px 0px 5px 0px rgb(0 0 0 / 10%);
+  }
+  #nav li:hover ul ul {
+    display: none;
+  }
+  /* hides sub-sublists */
+  #nav li:hover ul {
+    display: block;
+  }
+  /* shows sublist on hover */
+  #nav li li:hover ul {
+    display: block;
+    /* shows sub-sublist on hover */
+    margin-left: 90%;
+    /* this should be the same width as the parent list item */
+    margin-top: -35px;
+    /* aligns top of sub menu with top of list item */
+  }
+  /**button-container**/
+  .second-nav .button-container{
+    text-align: center;
+  }
+  .second-nav .button-container button{
+    border-radius:30px;
+    width: auto;
+    text-transform: uppercase;
+    background-color:Green;
+    border:none;
+  }
+  .second-nav .button-container .btn:focus,
+  .second-nav .button-container .btn:active
+ {
+    background-color:Green;
+    border-color:Green;
+    outline: none;
+    border:none;
+ }
 /*MEDIA QUERIES*/
+/***MEDIA QUERIES***/
+@media(min-width: 1199px){
+  .second-nav .button-container button{
+    margin:0 5%;
+  }
+}
+@media(max-width: 1199px){
+  .second-nav .button-container button{
+    margin:0 1%;
+  }
+}
+@media(max-width: 991px){
+  .navbar-collapse > .left > li{
+    width: 10%;
+  }
+  .mynavbar .second-nav{
+  padding-top: 0px;
+  padding-bottom: 0px;
+ }
+ .navbar .search-container .form-control{
+   width: 70%;
+ }
+ #nav li a{
+  width: 110px;
+ }
+}
+@media(max-width: 991px) and (min-width:576px){
+  .navbar-expand-lg .right{
+    flex-direction: row;
+  }
+  .mynavbar .right{
+   padding: unset;
+  }
+  .navbar-expand-lg .left{
+   flex-direction: row;
+  }
+}
 @media(min-width:768px){
   .top-info-left{
     width: 30%;
@@ -28,6 +168,17 @@
   .topbar .top-info-right{
     width: 70%;
   }
+}
+@media (max-width: 767px) and (min-width: 576px){
+  .navbar-collapse .right > li {
+    padding: 10px;
+  }
+  .navbar .search-container .form-inline{
+   justify-content: center;
+ }
+  .navbar .search-container .form-control{
+   width: 50%;
+ }
 }
 @media(max-width: 767px){
   .topbar .bckgrnd .col-lg-11{
@@ -38,4 +189,78 @@
     display: initial;
     width: initial;
   }
+}
+@media (min-width: 576px){
+  .sidenav,
+  .navbar .opennav,
+  .navbar .search-mob{
+    display: none;
+  }  
+  .mynavbar .navbar-collapse {
+     display: -ms-flexbox !important;
+     display: flex !important;
+     -ms-flex-preferred-size: auto;
+     flex-basis: auto;
+   }
+  .mynavbar .navbar-toggler,
+  .mynavbar .mob-logo, 
+  .mynavbar .mob-cart{
+    display: none;
+   }
+}
+@media (max-width: 575px){
+   .mynavbar .mob-logo img{
+    width: auto;
+   }
+   .mynavbar{
+    flex-wrap: initial;
+   }
+   .mynavbar .mob-logo{
+    text-align: center;
+    margin:auto;
+   }
+   .mob-nav{
+    margin-top: 10px;
+   }
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #cdc9c9;
+    display: block;
+    transition: 0.3s;
+    font-family: 'Dosis', sans-serif;
+  }
+  .sidenav .closebtn {
+    position: absolute;
+    top: -5px;
+    right: 10px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  .sidenav ul li ul li a{
+    color:black;
+  }
+  .mob-nav .dropdown-menu{
+    position: absolute;
+  }
+ .second-nav{
+    display: none;
+   }
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 14px;}
 }
