@@ -21,21 +21,16 @@
    text-align: center;
 }
 /*---NAVBAR---*/
-.mynavbar{
-  margin-top: -16px;
-}
 .second-nav{
   border-bottom: 1px solid #DBDCDE;
-}
-.second-nav .dsktp_logo img,
-.mynavbar .mob-logo{
-  max-width: 45%;
 }
 .second-nav .dsktp_logo{
   text-align: center;
 }
 .second-nav #nav{
   justify-content: center;
+  position: relative;
+  z-index: 2;
 }
 .mynavbar .navbar-toggler{
   color:#cdc9c9;
@@ -53,19 +48,18 @@
     display: inline-block;
     position: relative;
   }
-  #nav li a {
-    padding: 0px 20px 0px 20px;
-    width: auto;
+  #nav li .nav-link{
+    padding: 0;
+  }
+  #nav li .nav-link,
+  #nav li .home-icon {
     display: block;
     text-transform: none;
     text-decoration: none;
     text-align: center;
-    border: 0;
-    border-radius: 0;
     font-family: inherit;
     font-size: 16px;
     font-weight: normal;
-    outline: none;
     cursor: pointer;
     color: black;
   }
@@ -78,9 +72,7 @@
     position: absolute;
     padding: 0;
     left: 0;
-    top:30px;
-    display: none;
-    z-index: 999;
+    line-height: 35px;
     display: none;
     max-width: none;
     border: 0;
@@ -123,6 +115,36 @@
     outline: none;
     border:none;
  }
+ .second-nav .button-container a{
+   color: green;
+ }
+ .mynavbar .button-container button{
+    width: auto;
+    font-size: 13px;
+ }
+ /*BANNER*/
+.top-banner .d-md-block,
+.top-banner .d-md-none{
+  width: 100%;
+}
+.top-banner img{
+  width: 100%;
+}
+/*FOOTER*/
+.ftr-bottom{
+  margin-top: 10px;
+}
+.ftr-bottom .bckgrnd{
+  background-color: black ;
+}
+.ftr-bottom .bckgrnd div{
+  border-top: 1px solid lightgrey;
+  text-align: center;
+}
+.bckgrnd div p{
+  color: white;
+  padding: 5px;
+}
 /*MEDIA QUERIES*/
 /***MEDIA QUERIES***/
 @media(min-width: 1199px){
@@ -135,33 +157,20 @@
     margin:0 1%;
   }
 }
-@media(max-width: 991px){
-  .navbar-collapse > .left > li{
-    width: 10%;
-  }
-  .mynavbar .second-nav{
-  padding-top: 0px;
-  padding-bottom: 0px;
- }
- .navbar .search-container .form-control{
-   width: 70%;
- }
- #nav li a{
-  width: 110px;
+@media(min-width: 1025px){
+  .second-nav .dsktp_logo img{
+    max-width: 45%;
  }
 }
-@media(max-width: 991px) and (min-width:576px){
-  .navbar-expand-lg .right{
-    flex-direction: row;
-  }
-  .mynavbar .right{
-   padding: unset;
-  }
-  .navbar-expand-lg .left{
-   flex-direction: row;
+@media(max-width: 1024px){
+  .second-nav .dsktp_logo img{
+    max-width: 65%;
   }
 }
-@media(min-width:768px){
+@media(min-width:992px){
+  #nav li .nav-link{
+    width: 120px;
+  }
   .top-info-left{
     width: 30%;
   }
@@ -169,16 +178,29 @@
     width: 70%;
   }
 }
-@media (max-width: 767px) and (min-width: 576px){
-  .navbar-collapse .right > li {
-    padding: 10px;
+@media(max-width: 991px){
+  .navbar-collapse > .left > li{
+    width: 10%;
   }
-  .navbar .search-container .form-inline{
-   justify-content: center;
+  .mynavbar .second-nav{
+    padding-top: 0px;
+    padding-bottom: 0px;
  }
-  .navbar .search-container .form-control{
-   width: 50%;
+  #nav li .nav-link{
+    width:105px;
  }
+}
+@media(max-width: 991px) and (min-width:768px){
+  .second-nav .button-container button{
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  .top-info-left{
+    width: 35%;
+  }
+  .topbar .top-info-right{
+    width: 65%;
+  }
 }
 @media(max-width: 767px){
   .topbar .bckgrnd .col-lg-11{
@@ -190,10 +212,8 @@
     width: initial;
   }
 }
-@media (min-width: 576px){
-  .sidenav,
-  .navbar .opennav,
-  .navbar .search-mob{
+@media (min-width: 768px){
+  .mynavbar {
     display: none;
   }  
   .mynavbar .navbar-collapse {
@@ -202,16 +222,8 @@
      -ms-flex-preferred-size: auto;
      flex-basis: auto;
    }
-  .mynavbar .navbar-toggler,
-  .mynavbar .mob-logo, 
-  .mynavbar .mob-cart{
-    display: none;
-   }
 }
-@media (max-width: 575px){
-   .mynavbar .mob-logo img{
-    width: auto;
-   }
+@media (max-width: 767px){
    .mynavbar{
     flex-wrap: initial;
    }
@@ -259,6 +271,16 @@
  .second-nav{
     display: none;
    }
+}
+@media(min-width:576px){
+  .mynavbar .mob-logo img{
+    max-width: 15%;
+  }
+}
+@media(max-width:575px){
+  .mynavbar .mob-logo img{
+    max-width: 19%;
+  }
 }
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
