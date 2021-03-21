@@ -1,24 +1,26 @@
 import { Component, OnInit } from '@angular/core';
+import { getNumberOfCurrencyDigits } from '@angular/common';
+import { CommonService } from 'src/app/Services/common.service';
 
 @Component({
   selector: 'app-header',
-  templateUrl: './header.component.html'
+  templateUrl: './header.component.html',
+
 })
 export class HeaderComponent implements OnInit {
 
-  menus: {};
-  subMenus: [];
-  constructor() { }
+  menus: any;
+
+  constructor(private commonService: CommonService) { }
 
   ngOnInit(): void {
-    this.loadMenus();
-
+    this.getMenus();
   }
 
-  loadMenus() {
+  getMenus() {
 
-    var menu = { "Home": "Home", "AboutUs": "AboutUs" }
-    this.menus = menu;
+    this.menus = [] = this.commonService.getMenus();
+    console.log(this.menus, " -- Load Menus--");
   }
   openNav() {
 

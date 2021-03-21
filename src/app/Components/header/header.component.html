@@ -1,42 +1,30 @@
 <div class="container-fluid topbar">
   <div class="row bckgrnd">
     <div class="col-lg-11 col-md-11">
-        <div class="top-info-left">
-          <span class="fa fa-phone"></span>Helpline:- +91-8491940604
-        </div>
-         <div class="top-info-right">
-           <marquee>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</marquee>
-        </div> 
+      <div class="top-info-left">
+        <span class="fa fa-phone"></span>Helpline:- +91-8491940604
+      </div>
+      <div class="top-info-right">
+        <marquee>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua.</marquee>
+      </div>
     </div>
   </div>
 </div>
 <nav class="navbar navbar-expand-lg navbar-light mynavbar">
   <!--start menu bar for mobile-->
-  <div id="mySidenav" class="sidenav" >
-  <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
-  <ul class="nav navbar-nav mob-nav">
-  <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
-         <span class="nav-label">About Us</span> <span class="caret"></span></a>
-      <ul class="dropdown-menu bg-light">
-          <li><a href="#">abc</a></li>
-          <li><a href="#">abc</a></li>
-          <li><a href="#">abc</a></li>
-          <li><a href="#">abc</a></li>
-      </ul>
-  </li>
-  <li><a href="#">Resources</a></li>
-  <li><a href="#">Support</a></li>
-  <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">Products</span> <span class="caret"></span></a>
-      <ul class="dropdown-menu bg-light">
-          <li><a href="#">abc</a></li>
-          <li><a href="#">abc</a></li>
-          <li><a href="#">abc</a></li>
-          <li><a href="#">abc</a></li>
-      </ul>
-  </li>
-  </ul>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+    <ul class="nav navbar-nav mob-nav" *ngFor="let menu of menus">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+          aria-expanded="true">
+          <span class="nav-label">{{menu.MenuName}}</span> <span class="caret"></span></a>
+        <ul class="dropdown-menu bg-light" *ngFor="let sub of menu.Pages">
+          <li><a href="#">{{sub.PageName}}</a></li>
+        </ul>
+      </li>
+    </ul>
   </div>
   <!--<a class="navbar-brand" href="#">Navbar</a>-->
   <span class="opennav" style="font-size:30px;cursor:pointer" (click)="openNav()">&#9776;</span>
@@ -48,52 +36,31 @@
     <a href=""><button type="button" class="btn btn-primary">Want to learn</button></a>
   </div>-->
   <!--end menu bar for mobile-->
-  </nav>
-  <!--menu for desktop-->
-  <nav class="navbar navbar-expand navbar-light second-nav">
+</nav>
+<!--menu for desktop-->
+<nav class="navbar navbar-expand navbar-light second-nav">
   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
     <div class="dsktp_logo col-lg-2 col-md-2">
-      <img src="assets\images\reckon.jpg"  alt="logo">
+      <img src="assets\images\reckon.jpg" alt="logo">
     </div>
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 menu-ul  col-lg-6 col-md-7"  id="nav">
-          <li class="nav-item active">   
-            <a  href="#" class="home-icon"><i class="fa fa-home"></i>
-            </a>
-          </li>
-          <li class="nav-item">   
-              <a class="nav-link" href="#">About Us<i class="fa fa-angle-down" style="padding-left: 5px;"></i>
-              </a>
-              <ul>
-                  <li><a href="#" class="nav-link"><i class="fa fa-hand-o-right"></i>abc
-                  </a></li>
-                  <li><a href="#" class="nav-link"><i class="fa fa-hand-o-right"></i>abc</a></li>
-                  <li><a href="#" class="nav-link"><i class="fa fa-hand-o-right"></i>abc</a></li>
-                  <li><a href="#" class="nav-link"><i class="fa fa-hand-o-right"></i>abc</a></li>
-              </ul>
-          </li>        
-          <li style="display: inline-block">|</li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Resources</a>
-          </li>
-          <li style="display: inline-block">|</li>
-          <li class="nav-item">
-              <a class="nav-link" href="#">Support</a>
-          </li>
-          <li style="display: inline-block">|</li>  
-          <li class="nav-item">
-           <a class="nav-link" href="#">Products <i class="fa fa-angle-down " style="padding-left: 5px;"></i>
-           </a>
-           <ul>
-              <li><a href="#" class="nav-link"><i class="fa fa-hand-o-right"></i>abc</a></li>
-              <li><a href="#" class="nav-link"><i class="fa fa-hand-o-right"></i>abc</a></li>
-              <li><a href="#" class="nav-link"><i class="fa fa-hand-o-right"></i>abc</a></li>
-              <li><a href="#" class="nav-link"><i class="fa fa-hand-o-right"></i>abc</a></li>
-           </ul>
-          </li>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 menu-ul  col-lg-6 col-md-7" id="nav">
+      <li class="nav-item active">
+        <a href="#" class="home-icon"><i class="fa fa-home"></i>
+        </a>
+      </li>
+      <li class="nav-item" *ngFor="let menu of menus">
+        <a class="nav-link" href="#">{{menu.MenuName}}<i class="fa fa-angle-down" style="padding-left: 5px;"></i>
+        </a>
+        <ul>
+          <li *ngFor="let sub of menu.Pages"><a href="#" class="nav-link"><i class="fa fa-hand-o-right"></i>
+              {{sub.PageName}}
+            </a></li>
+       </ul>
+      </li>
     </ul>
     <div class="button-container  col-lg-4 col-md-3">
       <button type="submit">Want to buy</button>
       <button type="submit">Want to learn</button>
     </div>
- </div>
- </nav>
+  </div>
+</nav>
