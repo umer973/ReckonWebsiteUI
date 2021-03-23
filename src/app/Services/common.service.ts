@@ -28,13 +28,13 @@ export class CommonService {
           { "path": "page3", "PageName": "page3" }
         ]
       },
-      // {"MenuID": 4, "MenuName": "Alliance", "path": "",},
+       {"MenuID": 4, "MenuName": "Alliance", "path": "",},
 
-      // {"MenuID": 5, "MenuName": "Partners", "path": "",},
+      {"MenuID": 5, "MenuName": "Partners", "path": "",},
 
       { "MenuID": 6, "MenuName": "Support", "path": "", },
       { "MenuID": 7, "MenuName": "Contact Us", "path": "", },
-      // { "MenuID": 8, "MenuName": "Tutorial", "path": "", },
+       { "MenuID": 8, "MenuName": "Tutorial", "path": "", },
       // { "MenuID": 9, "MenuName": "Testimonials", "path": "", },
     ]
 
