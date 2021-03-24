@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { MainComponent } from './Components/main/main.component';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { ClientsComponent } from './Components/clients/clients.component';
 
 @NgModule({
@@ -19,8 +18,7 @@ import { ClientsComponent } from './Components/clients/clients.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    SlickCarouselModule
+    AppRoutingModule
     
   ],
   providers: [],
