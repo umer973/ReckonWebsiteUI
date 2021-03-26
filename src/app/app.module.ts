@@ -7,6 +7,8 @@ import { HeaderComponent } from './Components/header/header.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { MainComponent } from './Components/main/main.component';
 import { ClientsComponent } from './Components/clients/clients.component';
+import { FormComponent } from './Components/form/form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,12 +16,14 @@ import { ClientsComponent } from './Components/clients/clients.component';
     HeaderComponent,
     FooterComponent,
     MainComponent,
-    ClientsComponent
+    ClientsComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
-    
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

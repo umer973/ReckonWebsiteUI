@@ -141,7 +141,8 @@
 .first-section h2,
 .second-section h2,
 .third-section h2,
-.fifth-section h2{
+.fifth-section h2,
+.help-section h2{
   text-transform: capitalize;
   font-weight: 500;
   text-align: center;
@@ -150,7 +151,8 @@
 .first-section  > .row,
 .second-section > .row,
 .third-section  > .row,
-.fifth-section > .row{
+.fifth-section > .row
+{
   padding: 40px 0px;
   text-align: center;
   margin: auto;
@@ -209,6 +211,7 @@
 }
 #testimonial_slider h5{
   text-transform: capitalize;
+  margin-bottom: 15px;
 }
 /*FOURTH-SECTION*/
 .fourth-section .row > div{
@@ -219,7 +222,8 @@
   color:lightgrey;
 }
 .fourth-section .row button,
-.second-section .row button
+.second-section .row button,
+.help-section button
 {
   padding: 0.5em 4.2em;
   border-radius: 23px;
@@ -228,6 +232,30 @@
   background-color: green;
   color:white;
   box-shadow: 0 10px 30px -8px rgb(0 0 0 / 16%);
+}
+/*HELP SECTION*/
+.help-section > .row{
+  padding: 40px 0px;
+}
+.help-section{
+  background-color: #fcfcfc;
+}
+.help-section > .row > div{
+  margin: auto;
+}
+.help-section form{
+  text-align: center;
+}
+.help-section form .form-group{
+  text-align: left;
+}
+.help-section button:hover,
+.help-section button:visited,
+.help-section button:focus{
+    border: none;
+    background-color: green;
+    color: white;
+    box-shadow: 0 10px 30px -8px rgb(0 0 0 / 16%);
 }
 /*FIFTH SECTION*/
 .fifth-section #clients_slider ul{
@@ -257,6 +285,9 @@
 }
 .ftr-bottom{
   background-color: #303030;
+}
+.ftr-bottom:nth-of-type(1){
+  margin-top: 35px;
 }
 .ftr-bottom .text-section2{
   margin: auto;

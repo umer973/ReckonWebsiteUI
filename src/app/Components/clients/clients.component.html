@@ -9,74 +9,17 @@
           <li data-target="#clients_slider" data-slide-to="1"></li>
         </ul>
       <div class="carousel-inner padding-0" role="listbox">
-      <!--First slide-->
       <div class="carousel-item active">
         <div class="row">
-          <div class="col-md-3 col-sm-3">
+          <div class="col-md-3 col-sm-3"  *ngFor="let client of clients">
             <div class="wrapper">
-              <img class="img-fluid" src="https://dummyimage.com/400x250/000/fff"
-                   alt="client logo">
-              <p>De Param Healthcare</p>
-            </div>
-          </div>
-          <div class="col-md- col-sm-3">
-            <div class="wrapper">
-              <img class="img-fluid" src="https://dummyimage.com/400x250/000/fff"
-                   alt="client logo">
-              <p>Kothilal Dental College</p>  
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-3">
-            <div class="wrapper">
-              <img class="img-fluid" src="https://dummyimage.com/400x250/000/fff"
-                   alt="client logo">           
-              <p>Surya Hospital</p>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-3">
-            <div class="wrapper">
-              <img class="img-fluid" src="https://dummyimage.com/400x250/000/fff"
-                   alt="client logo">
-              <p>Shakun Sales Pvt. Ltd.</p>
+              <img class="img-fluid"  [src] ="client.ImagePath"
+                   alt="{{client.ClientName}}">
+              <p>{{client.ClientName}}</p>
             </div>
           </div>
         </div>
       </div>
-      <!--First slide-->
-      <!--Second slide-->
-      <div class="carousel-item">
-        <div class="row">
-          <div class="col-md-3 col-sm-3">
-            <div class="wrapper">
-              <img class="img-fluid" src="https://dummyimage.com/400x250/000/fff"
-                   alt="client logo">
-                <p>K.G.M.University</p>            
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-3">
-            <div class="wrapper">
-              <img class="img-fluid" src="https://dummyimage.com/400x250/000/fff"
-                   alt="client logo">
-                <p>LINNET Hospicare Pvt. Ltd</p>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-3">
-            <div class="wrapper">
-              <img class="img-fluid" src="https://dummyimage.com/400x250/000/fff"
-                   alt="client logo">
-                <p>Natel Neutratec</p>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-3">
-            <div class="wrapper">
-              <img class="img-fluid" src="https://dummyimage.com/400x250/000/fff"
-                   alt="client logo">
-                <p class="card-text">Nansom Health Care</p>       
-            </div>
-          </div> 
-        </div>
-      </div>
-      <!--Second slide-->
       </div>
     </div>
   </div>
