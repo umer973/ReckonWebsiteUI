@@ -30,4 +30,6 @@ export class HeaderComponent implements OnInit {
 
     document.getElementById("mySidenav").style.width = "0";
   }
+
+  
 }

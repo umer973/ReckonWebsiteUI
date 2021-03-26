@@ -3,10 +3,10 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form',
-  templateUrl: './form.component.html',
-  styleUrls: ['./form.component.css']
+  templateUrl: './enquiry-form.component.html',
+  
 })
-export class FormComponent implements OnInit {
+export class EnquiryFormComponent implements OnInit {
 
   constructor() { }
 

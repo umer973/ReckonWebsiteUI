@@ -548,3 +548,8 @@
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 14px;}
 }
+
+#map {
+  height: 500px;
+  width: 100%;
+ }

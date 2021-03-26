@@ -19,7 +19,7 @@
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
           aria-expanded="true">
-          <span class="nav-label">{{menu.MenuName}}</span> <span class="caret"></span></a>
+          <span class="nav-label" routerLink={{menu.path}}>{{menu.MenuName}}</span> <span class="caret"></span></a>
         <ul class="dropdown-menu" *ngFor="let sub of menu.Pages">
           <li><a href="#">{{sub.PageName}}</a></li>
         </ul>
@@ -49,7 +49,7 @@
         </a>
       </li>
       <li class="nav-item" *ngFor="let menu of menus">
-        <a class="nav-link" href="#">{{menu.MenuName}}<i class="fa fa-angle-down" style="padding-left: 5px;"></i>
+        <a  class="nav-link" routerLink={{menu.path}}>{{menu.MenuName}}<i class="fa fa-angle-down" style="padding-left: 5px;"></i>
         </a>
         <ul>
           <li *ngFor="let sub of menu.Pages"><a href="#" class="nav-link"><i class="fa fa-hand-o-right"></i>

@@ -11,36 +11,34 @@ export class CommonService {
 
     const Menus = [
       {
-        "MenuID": 1, "MenuName": "About Us", "path": "",
-        "Pages": [
-          { "path": "page1", "PageName": "Page1" }
-        ]
+        "MenuID": 1, "MenuName": "About Us", "path": "about-us",
+        
       },
       {
         "MenuID": 2, "MenuName": "Product", "path": "",
         "Pages": [
-          { "path": "page2", "PageName": "Product1" },
-          { "path": "page2", "PageName": "Product1" }
+          { "path": "page2", "PageName": "Automobiles Parts & Spares" },
+          { "path": "page2", "PageName": "Chemist Shop" },
+          { "path": "page2", "PageName": "FMCG Distribution" },
+          { "path": "page2", "PageName": "Department & Grocery (POS)" }
         ]
       },
       {
         "MenuID": 3, "MenuName": "Customer", "path": "",
-        "Pages": [
-          { "path": "page3", "PageName": "page3" }
-        ]
+        
       },
-      {"MenuID": 4, "MenuName": "Alliance", "path": "",},
+      { "MenuID": 4, "MenuName": "Alliance", "path": "", },
 
-      {"MenuID": 5, "MenuName": "Partners", "path": "",},
+      { "MenuID": 5, "MenuName": "Partners", "path": "", },
 
       { "MenuID": 6, "MenuName": "Support", "path": "", },
-      { "MenuID": 7, "MenuName": "Contact Us", "path": "", },
-       { "MenuID": 8, "MenuName": "Tutorial", "path": "", },
+      { "MenuID": 7, "MenuName": "Contact Us", "path": "contact-us", },
+      { "MenuID": 8, "MenuName": "Tutorial", "path": "", },
       // { "MenuID": 9, "MenuName": "Testimonials", "path": "", },
     ]
     return Menus;
   }
-  getClients(){
+  getClients() {
 
     const Clients = [
       {
