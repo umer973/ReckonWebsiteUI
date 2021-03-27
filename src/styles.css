@@ -137,6 +137,22 @@
 .top-banner img{
   width: 100%;
 }
+/*BELOW SECTION*/
+.below-slider > .row{
+  margin: auto;
+}
+.below-slider .wrapper{
+  display: flex;
+  justify-content: center;
+  padding: 5px 0px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.below-slider .wrapper h5{
+  margin-left: 5px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
 /*first-section*/
 .first-section h2,
 .second-section h2,
@@ -156,6 +172,9 @@
   padding: 40px 0px;
   text-align: center;
   margin: auto;
+}
+.first-section{
+  margin-top: 15px;
 }
 .first-section .box-wrapper p{
   margin-top: 10px;
@@ -258,6 +277,9 @@
     box-shadow: 0 10px 30px -8px rgb(0 0 0 / 16%);
 }
 /*FIFTH SECTION*/
+.fifth-section{
+  margin-bottom: 35px;
+}
 .fifth-section #clients_slider ul{
   bottom: -35px;
 }
@@ -285,9 +307,6 @@
 }
 .ftr-bottom{
   background-color: #303030;
-}
-.ftr-bottom:nth-of-type(1){
-  margin-top: 35px;
 }
 .ftr-bottom .text-section2{
   margin: auto;
@@ -333,7 +352,46 @@
 .ftr-bottom .social-icons img{
    margin: 5px 5px 0px;
 }
-.sticky-btn a{
+/**ABOUT US**/
+.about-us > .text,
+.about-us > h1,
+.contact-us > h1{
+  padding: 25px 0px;
+}
+.about-us > h1,
+.contact-us > h1
+{
+  text-align: center;
+  text-transform: capitalize;
+  color:darkgray;
+}
+.about-us > .text{
+  text-align: center;
+}
+.about-us > .text p
+{
+  padding: 12px;
+}
+.about-us > .text h2{
+  padding: 12px 0px;
+}
+/*CONTACT US*/
+.contact-us > hr{
+  width: 50%;
+}
+.contact-us .row > div{
+  margin: auto;
+  text-align: center;
+  padding-bottom: 25px;
+}
+.contact-us .fisrt-div,
+.contact-us .second-div{
+   margin-top: 30px;
+}
+.contact-us  .second-div i{
+   margin-right: 5px;
+}
+/**.sticky-btn a{
   top:200px;
   position:fixed;
   right:-97px;
@@ -347,7 +405,7 @@
 .sticky-btn a:hover{
   text-decoration: none;
   color:#fff;
-}
+}**/
 /*MEDIA QUERIES*/
 /***MEDIA QUERIES***/
 @media(min-width:1099px){
@@ -439,6 +497,9 @@
   .ftr-bottom .cpyryt div{
     display: flex;
   }
+  .about-us > .row > div:nth-of-type(1){
+    border-right: 1px solid darkgray;
+  }
 }
 @media (max-width: 767px){
   .topbar .bckgrnd .col-lg-11{
@@ -524,15 +585,30 @@
     display: initial;
     text-align: center;
   }
+  .about-us > .row > div:nth-of-type(1){
+    border-bottom: 1px solid darkgray;
+  }
 }
 @media(min-width:576px){
   .mynavbar .mob-logo img{
     max-width: 15%;
   }
+  .below-slider .wrapper{
+    border-right: 1px solid darkgray;
+  }
+  .below-slider .wrapper:nth-of-type(3){
+    border: none;
+  }
+  .below-slider .wrapper h5{
+    font-size: 16px;
+  }
 }
 @media(max-width:575px){
   .mynavbar .mob-logo img{
     max-width: 19%;
+  }
+  .below-slider .wrapper h5{
+    font-size: 14px;
   }
   .ftr-bottom .text-section2{
     margin-top: 0px;
