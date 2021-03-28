@@ -24,6 +24,7 @@
     "bootstrap": "^4.6.0",
     "bootstrap-icons": "^1.4.0",
     "font-awesome": "^4.7.0",
+    "ng2-validation": "^4.2.0",
     "ngx-slick-carousel": "^0.5.1",
     "rxjs": "~6.6.0",
     "slick-carousel": "^1.8.1",
