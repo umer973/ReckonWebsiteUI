@@ -14,6 +14,7 @@ import { LayoutModule } from './Components/layout/layout.module';
 import { MainComponent } from './Components/main/main.component';
 import { ContactUsComponent } from './Components/contact-us/contact-us.component';
 import { AboutUsComponent } from './Components/about-us/about-us.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { AboutUsComponent } from './Components/about-us/about-us.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    LayoutModule
+    LayoutModule,
+    SlickCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

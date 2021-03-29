@@ -70,32 +70,18 @@
   }
   /* highlights current hovered list item and the parent list items when hovering over sub menues */
   #nav ul {
-    position: absolute;
-    padding: 0;
-    left: 0;
-    line-height: 35px;
     display: none;
-    max-width: none;
-    border: 0;
+  }
+  #nav li:hover ul
+  {
+    min-height: 250px;
+    display: grid!important;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 20px 10px;
     background: #fff;
-    border-radius: 0;
     box-shadow: 0px 0px 5px 0px rgb(0 0 0 / 10%);
-  }
-  #nav li:hover ul ul {
-    display: none;
-  }
-  /* hides sub-sublists */
-  #nav li:hover ul {
-    display: block;
-  }
-  /* shows sublist on hover */
-  #nav li li:hover ul {
-    display: block;
-    /* shows sub-sublist on hover */
-    margin-left: 90%;
-    /* this should be the same width as the parent list item */
-    margin-top: -35px;
-    /* aligns top of sub menu with top of list item */
+    position: absolute;
+    line-height: 35px;
   }
   .second-nav .nav-link i{
     color:black;
@@ -383,34 +369,28 @@
   margin: auto;
   text-align: center;
   padding-bottom: 25px;
+  background-color: #fcfcfc;
 }
 .contact-us .fisrt-div,
 .contact-us .second-div{
    margin-top: 30px;
+   padding: 10px;
 }
 .contact-us  .second-div i{
    margin-right: 5px;
 }
-/**.sticky-btn a{
-  top:200px;
-  position:fixed;
-  right:-97px;
-  z-index: 1000;
+.contact-us  .second-div img{
   transform: rotate(-90deg);
-  padding:10px 20px 35px;
-  height: 0px;
-  background-color:green;
-  color:#fff;
+  width: 20%;
 }
-.sticky-btn a:hover{
-  text-decoration: none;
-  color:#fff;
-}**/
 /*MEDIA QUERIES*/
 /***MEDIA QUERIES***/
 @media(min-width:1099px){
-  #nav li .nav-link{
+  #nav li .menu-size{
     width:110px;
+  }
+  #nav li .sub-size{
+    width:120px;
   }
   #nav li .nav-link{
     padding: 0;
@@ -624,8 +604,21 @@
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 14px;}
 }
-
 #map {
   height: 500px;
   width: 100%;
  }
+ /*slick*/
+ .slick-slider {
+  width: 88%;
+  margin: auto;
+  background: rgb(14, 13, 13);
+}
+  
+body .slick-prev, 
+body .slick-next {
+  height: 45px;
+  width: 40px;
+  background: #575d59 !important;
+  z-index: 100;
+}
