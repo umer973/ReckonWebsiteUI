@@ -11,26 +11,58 @@ export class CommonService {
 
     const Menus = [
       {
-        "MenuID": 1, "MenuName": "About Us", "path": "about-us",
-        
+        "MenuID": 1, "MenuName": "About Us", "path": "about-us",    
       },
       {
         "MenuID": 2, "MenuName": "Product", "path": "",
         "Pages": [
-          { "path": "page2", "PageName": "Automobiles Parts & Spares" },
-          { "path": "page2", "PageName": "Chemist Shop" },
-          { "path": "page2", "PageName": "FMCG Distribution" },
-          { "path": "page2", "PageName": "Department & Grocery (POS)" }
+          { "path": "page2", "PageName": "Automobiles Parts & Spares",
+          "Pages": [
+              { "path": "page2", "SubPageName": "sub menu" },
+              { "path": "page2", "SubPageName": "sub menu" },
+              { "path": "page2", "SubPageName": "sub menu" },
+              { "path": "page2", "SubPageName": "sub menu" },
+              { "path": "page2", "SubPageName": "sub menu" }
+            ]
+          },
+          { "path": "page2", "PageName": "Chemist Shop" ,
+          "Pages": [
+              { "path": "page2", "SubPageName": "sub menu" },
+              { "path": "page2", "SubPageName": "sub menu" },
+              { "path": "page2", "SubPageName": "sub menu" },
+              { "path": "page2", "SubPageName": "sub menu" },
+              { "path": "page2", "SubPageName": "sub menu" },
+              { "path": "page2", "SubPageName": "sub menu" },
+              { "path": "page2", "SubPageName": "sub menu" }
+            ]
+          },
+          { "path": "page2", "PageName": "FMCG Distribution",
+          "Pages": [
+            { "path": "page2", "SubPageName": "sub menu" },
+            { "path": "page2", "SubPageName": "sub menu" },
+            { "path": "page2", "SubPageName": "sub menu" },
+            { "path": "page2", "SubPageName": "sub menu" },
+            { "path": "page2", "SubPageName": "sub menu" },
+            { "path": "page2", "SubPageName": "sub menu" },
+            { "path": "page2", "SubPageName": "sub menu" }
+           ]   
+          },
+          { "path": "page2", "PageName": "Department & Grocery (POS)",
+          "Pages": [
+            { "path": "page2", "SubPageName": "sub menu" },
+            { "path": "page2", "SubPageName": "sub menu" },
+            { "path": "page2", "SubPageName": "sub menu" },
+            { "path": "page2", "SubPageName": "sub menu" },
+            { "path": "page2", "SubPageName": "sub menu" },
+            { "path": "page2", "SubPageName": "sub menu" },
+            { "path": "page2", "SubPageName": "sub menu" }
+           ]
+          }
         ]
       },
-      {
-        "MenuID": 3, "MenuName": "Customer", "path": "",
-        
-      },
+      { "MenuID": 3, "MenuName": "Customer", "path": "", },
       { "MenuID": 4, "MenuName": "Alliance", "path": "", },
-
       { "MenuID": 5, "MenuName": "Partners", "path": "", },
-
       { "MenuID": 6, "MenuName": "Support", "path": "", },
       { "MenuID": 7, "MenuName": "Contact Us", "path": "contact-us", },
       { "MenuID": 8, "MenuName": "Tutorial", "path": "", },

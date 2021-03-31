@@ -1,5 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 /** HEADER **/
+body{
+  font-family: 'Changa', sans-serif;
+}
 .padding-0 {
     padding: 0px;
 }
@@ -59,6 +62,7 @@
     font-weight: normal;
     cursor: pointer;
     color: black;
+    line-height: 1.5;
   }
   #nav .home {
     margin-top: auto;
@@ -69,12 +73,12 @@
     color:#cdc9c9; 
   }
   /* highlights current hovered list item and the parent list items when hovering over sub menues */
-  #nav ul {
+  #nav .bg-light {
     display: none;
   }
-  #nav li:hover ul
+  #nav > li:hover  > ul
   {
-    min-height: 250px;
+    min-height: auto;
     display: grid!important;
     grid-template-columns: repeat(4, 1fr);
     padding: 20px 10px;
@@ -82,6 +86,20 @@
     box-shadow: 0px 0px 5px 0px rgb(0 0 0 / 10%);
     position: absolute;
     line-height: 35px;
+  }
+  #nav .sub-items{
+    padding-left: 0px;
+  }
+  #nav .sub-items li{
+    padding: 0px;
+    display: block;
+  }
+  #nav .sub-items > li > a{
+    padding: 0px;
+  }
+  #nav li .sub-size{
+    font-weight: bold;
+    min-height: 30%;
   }
   .second-nav .nav-link i{
     color:black;
@@ -96,7 +114,7 @@
     padding: 5px;
     border-radius: 23px;
     text-transform: uppercase;
-    background-color:green;
+    background-color:#1ea5df;
     border:none;
     color:white;
     box-shadow: 0 10px 30px -8px rgb(0 0 0 / 16%);
@@ -106,8 +124,8 @@
   .second-nav .button-container .btn:focus,
   .second-nav .button-container .btn:active
  {
-    background-color:green;
-    border-color:green;
+    background-color:#1ea5df;
+    border-color:#1ea5df;
     outline: none;
     border:none;
  }
@@ -124,6 +142,9 @@
   width: 100%;
 }
 /*BELOW SECTION*/
+.below-slider{
+  background-color: rgba(48, 48, 48, 0.6);
+}
 .below-slider > .row{
   margin: auto;
 }
@@ -138,6 +159,8 @@
   margin-left: 5px;
   margin-top: auto;
   margin-bottom: auto;
+  color: white;
+  font-weight: bold;
 }
 /*first-section*/
 .first-section h2,
@@ -234,9 +257,10 @@
   border-radius: 23px;
   margin-top: 25px;
   border: none;
-  background-color: green;
+  background-color:#1ea5df;
   color:white;
   box-shadow: 0 10px 30px -8px rgb(0 0 0 / 16%);
+  font-weight: bold;
 }
 /*HELP SECTION*/
 .help-section > .row{
@@ -258,7 +282,7 @@
 .help-section button:visited,
 .help-section button:focus{
     border: none;
-    background-color: green;
+    background-color: #1ea5df;
     color: white;
     box-shadow: 0 10px 30px -8px rgb(0 0 0 / 16%);
 }
@@ -293,6 +317,7 @@
 }
 .ftr-bottom{
   background-color: #303030;
+  letter-spacing: 1px;
 }
 .ftr-bottom .text-section2{
   margin: auto;
@@ -302,7 +327,7 @@
 }
 .ftr-bottom .text-section2 .heading{
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: bold;
   color: white;
 }
 .ftr-bottom .text-section2 .normal,
@@ -310,7 +335,7 @@
   font-weight: normal;
   color: white;
   margin-bottom: 5px;
-  font-size: 14px;
+  font-size: 16px;
 }
 .ftr-bottom .text-section2 a{
    text-decoration: none;
@@ -392,9 +417,6 @@
   #nav li .sub-size{
     width:120px;
   }
-  #nav li .nav-link{
-    padding: 0;
-  }
 }
 @media(min-width: 1025px){
   .second-nav .dsktp_logo img{
@@ -453,15 +475,26 @@
     -ms-flex-preferred-size: auto;
     flex-basis: auto;
   }
+  .below-slider .wrapper h5,
+  .ftr-bottom .text-section2 .heading,
+  #testimonial_slider .box-wrapper p,
+  .first-section .box-wrapper p,
+  .fifth-section .trending_row p,
+  .topbar .bckgrnd{
+    font-size: 18px;
+  }
   .second-section{
     margin-top: 20px;
   }
   .second-section .box-wrapper{
     margin: 40px 0px;
   }
+  
   .ftr-bottom .text-section2 > div
   {
     border-right: 1px solid #505050;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .ftr-bottom .text-section2 > .social-icons
   {
@@ -469,7 +502,7 @@
   }
   .ftr-bottom .text-section2
   {
-    padding: 30px 0;
+    padding: 50px 0;
   }
   .ftr-bottom .social-icons img{
     width:10%;
@@ -540,6 +573,9 @@
   .second-nav{
     display: none;
    }
+   .below-slider .wrapper h5{
+    font-size: 16px;
+  }
   .first-section .box-container{
      margin-bottom: 10px;
   }
@@ -579,9 +615,6 @@
   .below-slider .wrapper:nth-of-type(3){
     border: none;
   }
-  .below-slider .wrapper h5{
-    font-size: 16px;
-  }
 }
 @media(max-width:575px){
   .mynavbar .mob-logo img{
@@ -610,15 +643,24 @@
  }
  /*slick*/
  .slick-slider {
-  width: 88%;
+  width: 100%;
   margin: auto;
-  background: rgb(14, 13, 13);
+} 
+.slick-slider button{
+  display: none !important;
 }
-  
-body .slick-prev, 
-body .slick-next {
-  height: 45px;
-  width: 40px;
-  background: #575d59 !important;
+.slick-slider .slick-prev{
+  left: -2%;
+}
+.slick-slider .slick-next{
+  right: -2%;
+}
+.slick-slider .slick-prev, 
+.slick-slider .slick-next {
+  position: absolute;
+  top: 35%;
+  height: auto;
+  width: auto;
   z-index: 100;
+  content: "\e258";
 }

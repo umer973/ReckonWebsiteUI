@@ -2,8 +2,7 @@
 <div class="container fifth-section">
   <div class="row trending_row">
     <h2 style="margin-left: auto; margin-right: auto;">Our Clients</h2>
-    <div id="clients_slider" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
+    <!--<div id="clients_slider" class="carousel slide" data-ride="carousel">
         <ul class="carousel-indicators">
           <li data-target="#clients_slider" data-slide-to="0" class="active"></li>
           <li data-target="#clients_slider" data-slide-to="1"></li>
@@ -21,8 +20,7 @@
         </div>
       </div>
       </div>
-    </div>
-  </div>
+    </div>-->
   <ngx-slick-carousel class="carousel" 
                         #slickModal="slick-carousel" 
                         [config]="slideConfig" 
@@ -31,7 +29,11 @@
                         (afterChange)="afterChange($event)"
                         (beforeChange)="beforeChange($event)">
         <div ngxSlickItem *ngFor="let slide of slides" class="slide">
-              <img src="{{ slide.img }}" alt="" width="100%">
+          <a href="{{ slide.path }}"><img src="{{ slide.img }}" alt="" width="100%"></a>
+          <p>{{ slide.name }}</p>
         </div>
-</ngx-slick-carousel>
+        <span class="slick-prev slick-arrow" aria-label="Previous" type="button"></span>
+        <span class="slick-next slick-arrow" aria-label="Next" type="button"></span>
+  </ngx-slick-carousel>
+ </div>
 </div>

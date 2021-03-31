@@ -53,9 +53,18 @@
         </a>
         <ul class="bg-light">
           <li *ngFor="let sub of menu.Pages">
-            <a href="#" class="nav-link sub-size"><i class="fa fa-hand-o-right"></i>
+            <!-- <ng-container *ngIf="menu.MenuName=='Product'">   
+            </ng-container> -->
+            <a href="#" class="nav-link sub-size">
               {{sub.PageName}}
             </a>
+            <ul class="sub-items">
+              <li *ngFor="let submenu of sub.Pages">
+                <a href="#" class="nav-link">
+                  {{submenu.SubPageName}}
+                </a>
+              </li>
+            </ul>
           </li>
        </ul>
       </li>

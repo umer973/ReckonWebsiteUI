@@ -22,13 +22,14 @@ export class ClientsComponent implements OnInit {
     console.log(this.clients, " -- Load clients--");
   }
   slides = [
-    {img: "https://dummyimage.com/350x150/423b42/fff"},
-    {img: "https://dummyimage.com/350x150/2a2b7a/fff"},
-    {img: "https://dummyimage.com/350x150/1a2b7a/fff"},
-    {img: "https://dummyimage.com/350x150/7a2b7a/fff"},
-    {img: "https://dummyimage.com/350x150/9a2b7a/fff"},
-    {img: "https://dummyimage.com/350x150/5a2b7a/fff"},
-    {img: "https://dummyimage.com/350x150/4a2b7a/fff"}
+    {img: "https://dummyimage.com/400x250/423b42/fff", name:"De Param Healthcare", path: ""},
+    {img: "https://dummyimage.com/400x250/2a2b7a/fff", name:"Kothilal Dental College",  path: ""},
+    {img: "https://dummyimage.com/400x250/4a2b7a/fff", name:"Surya Hospital",  path: ""},
+    {img: "https://dummyimage.com/400x250/7a2b7a/fff", name:"Shakun Sales Pvt.Ltd.",  path: ""},
+    {img: "https://dummyimage.com/400x250/9a2b7a/fff", name:"K.G.M.University", path: ""},
+    {img: "https://dummyimage.com/400x250/5a2b7a/fff", name:"LINNET Hospicare Pvt.Ltd",  path: ""},
+    {img: "https://dummyimage.com/400x250/4a2b7a/fff", name:"Natel Neutratec",  path: ""},
+    {img: "https://dummyimage.com/400x250/7a2b7a/fff", name:"Nansom Health Care",  path: ""},
   ];
   slideConfig = {"slidesToShow": 4, "slidesToScroll": 4};
   
