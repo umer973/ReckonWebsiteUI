@@ -415,7 +415,7 @@ body{
     width:110px;
   }
   #nav li .sub-size{
-    width:120px;
+    width:182px;
   }
 }
 @media(min-width: 1025px){
@@ -429,6 +429,11 @@ body{
 @media(max-width: 1024px){
   .second-nav .dsktp_logo img{
     max-width: 65%;
+  }
+}
+@media(min-width:992px )and (max-width:1098px){
+  #nav li .sub-size{
+    width: 145px;
   }
 }
 @media(min-width:992px){
@@ -621,7 +626,7 @@ body{
     max-width: 19%;
   }
   .below-slider .wrapper h5{
-    font-size: 14px;
+    display: none;
   }
   .ftr-bottom .text-section2{
     margin-top: 0px;

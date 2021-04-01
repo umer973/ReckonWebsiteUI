@@ -31,5 +31,9 @@ export class HeaderComponent implements OnInit {
     document.getElementById("mySidenav").style.width = "0";
   }
 
-  
+  getClass(menu) {
+    if (menu == "Product") {
+      return "fa fa-angle-down";
+    }
+  }
 }

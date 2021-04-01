@@ -18,7 +18,7 @@ export class CommonService {
         "Pages": [
           { "path": "page2", "PageName": "Automobiles Parts & Spares",
           "Pages": [
-              { "path": "page2", "SubPageName": "sub menu" },
+              { "path": "page2", "SubPageName": "sub menu Lorem ipsum dolor sit amet" },
               { "path": "page2", "SubPageName": "sub menu" },
               { "path": "page2", "SubPageName": "sub menu" },
               { "path": "page2", "SubPageName": "sub menu" },
