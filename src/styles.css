@@ -81,7 +81,7 @@ body{
     min-height: auto;
     display: grid!important;
     grid-template-columns: repeat(4, 1fr);
-    padding: 20px 10px;
+    padding: 20px 10px 30px;
     background: #fff;
     box-shadow: 0px 0px 5px 0px rgb(0 0 0 / 10%);
     position: absolute;
@@ -96,10 +96,14 @@ body{
   }
   #nav .sub-items > li > a{
     padding: 0px;
+    text-align: left;
+    font-size: 14px;
   }
   #nav li .sub-size{
     font-weight: bold;
-    min-height: 30%;
+    min-height: 12%;
+    text-align: left;
+    padding: 0px;
   }
   .second-nav .nav-link i{
     color:black;
@@ -300,6 +304,10 @@ body{
   font-size: 13px;
   margin: 5px;  
 }
+.fifth-section .trending_row p{
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
 /*FOOTER*/
 .ftr-bottom .cpyryt{
   background-color: black;
@@ -415,7 +423,7 @@ body{
     width:110px;
   }
   #nav li .sub-size{
-    width:182px;
+    width:236px;
   }
 }
 @media(min-width: 1025px){
@@ -433,7 +441,7 @@ body{
 }
 @media(min-width:992px )and (max-width:1098px){
   #nav li .sub-size{
-    width: 145px;
+    width: 190px;
   }
 }
 @media(min-width:992px){
@@ -469,6 +477,12 @@ body{
   .topbar .top-info-right{
     width: 65%;
   }
+  #nav .bg-light > li{
+    padding-right: 10px;
+  }
+  #nav .sub-items > li > a{
+    width: 160px;
+  }
 }
 @media (min-width: 768px){
   .mynavbar {
@@ -480,11 +494,13 @@ body{
     -ms-flex-preferred-size: auto;
     flex-basis: auto;
   }
+  .fifth-section .trending_row p{
+    font-size: 14px;
+  }
   .below-slider .wrapper h5,
   .ftr-bottom .text-section2 .heading,
   #testimonial_slider .box-wrapper p,
   .first-section .box-wrapper p,
-  .fifth-section .trending_row p,
   .topbar .bckgrnd{
     font-size: 18px;
   }

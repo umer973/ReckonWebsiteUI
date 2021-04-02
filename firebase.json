@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/ReckonWebsite",
+    "public": "y",
     "ignore": [
       "firebase.json",
       "**/.*",

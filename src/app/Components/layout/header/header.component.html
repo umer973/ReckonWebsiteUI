@@ -51,10 +51,9 @@
       <li class="nav-item" *ngFor="let menu of menus">
         <a  class="nav-link menu-size" routerLink={{menu.path}}>{{menu.MenuName}}<i [ngClass]="getClass(menu.MenuName)"  style="padding-left: 5px;"></i>
         </a>
-        <ul class="bg-light">
+        <ng-container *ngIf="menu.MenuName=='Product'">
+          <ul class="bg-light">
           <li *ngFor="let sub of menu.Pages">
-            <!-- <ng-container *ngIf="menu.MenuName=='Product'">   
-            </ng-container> -->
             <a href="#" class="nav-link sub-size">
               {{sub.PageName}}
             </a>
@@ -66,7 +65,8 @@
               </li>
             </ul>
           </li>
-       </ul>
+          </ul>
+        </ng-container>
       </li>
     </ul>
     <!--<div class="button-container  col-lg-2 col-md-2">
