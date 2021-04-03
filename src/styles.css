@@ -416,6 +416,23 @@ body{
   transform: rotate(-90deg);
   width: 20%;
 }
+/*slick*/
+.slick-slider {
+  margin: auto;
+} 
+.slick-slider .prev-slide{
+  left: -3%;
+}
+.slick-slider .next-slide{
+  right: -3%;
+}
+.slick-slider .prev-slide, 
+.slick-slider .next-slide {
+  position: absolute;
+  height: auto;
+  width: auto;
+  z-index: 100;
+}
 /*MEDIA QUERIES*/
 /***MEDIA QUERIES***/
 @media(min-width:1099px){
@@ -454,6 +471,11 @@ body{
   #nav li .nav-link{
     font-size: 16px;
   }
+  .slick-slider .prev-slide, 
+  .slick-slider .next-slide{
+    top: 34%;
+    font-size: 30px;
+  }
 }
 @media(max-width: 991px){
   .navbar-collapse > .left > li{
@@ -483,6 +505,11 @@ body{
   #nav .sub-items > li > a{
     width: 160px;
   }
+  .slick-slider .prev-slide, 
+  .slick-slider .next-slide{
+    top: 25%;
+    font-size: 24px;
+  }
 }
 @media (min-width: 768px){
   .mynavbar {
@@ -510,7 +537,6 @@ body{
   .second-section .box-wrapper{
     margin: 40px 0px;
   }
-  
   .ftr-bottom .text-section2 > div
   {
     border-right: 1px solid #505050;
@@ -606,6 +632,14 @@ body{
   .second-section .box-wrapper{
     margin: 25px 0px;
   }
+  .slick-slider .prev-slide, 
+  .slick-slider .next-slide{
+    top: 15%;
+    font-size: 24px;
+  }
+  .fifth-section .trending_row p{
+    font-size: 10px;
+  }
   .ftr-bottom .text-section2 {
     padding: 20px 0 10px;
   }
@@ -636,6 +670,9 @@ body{
   .below-slider .wrapper:nth-of-type(3){
     border: none;
   }
+  .slick-slider{
+    width: 100%;
+  }
 }
 @media(max-width:575px){
   .mynavbar .mob-logo img{
@@ -643,6 +680,9 @@ body{
   }
   .below-slider .wrapper h5{
     display: none;
+  }
+  .slick-slider{
+    width: 95%;
   }
   .ftr-bottom .text-section2{
     margin-top: 0px;
@@ -662,26 +702,3 @@ body{
   height: 500px;
   width: 100%;
  }
- /*slick*/
- .slick-slider {
-  width: 100%;
-  margin: auto;
-} 
-.slick-slider button{
-  display: none !important;
-}
-.slick-slider .slick-prev{
-  left: -2%;
-}
-.slick-slider .slick-next{
-  right: -2%;
-}
-.slick-slider .slick-prev, 
-.slick-slider .slick-next {
-  position: absolute;
-  top: 35%;
-  height: auto;
-  width: auto;
-  z-index: 100;
-  content: "\e258";
-}

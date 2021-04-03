@@ -31,7 +31,14 @@ export class ClientsComponent implements OnInit {
     {img: "https://dummyimage.com/400x250/4a2b7a/fff", name:"Natel Neutratec",  path: ""},
     {img: "https://dummyimage.com/400x250/7a2b7a/fff", name:"Nansom Health Care",  path: ""},
   ];
-  slideConfig = {"slidesToShow": 4, "slidesToScroll": 4};
+  slideConfig = {
+    "slidesToShow": 4, 
+    "slidesToScroll": 1,
+    "nextArrow": "<div class='nav-btn next-slide'>></div>",
+    "prevArrow": "<div class='nav-btn prev-slide'><</div>",
+    "infinite": true,
+    "autoplay":true
+  };
   
   slickInit(e) {
     console.log('slick initialized');
