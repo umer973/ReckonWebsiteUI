@@ -15,14 +15,30 @@
   <!--start menu bar for mobile-->
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
-    <ul class="nav navbar-nav mob-nav" *ngFor="let menu of menus">
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+    <ul class="nav navbar-nav mob-nav">
+      <li>
+        <a href="#" class="home-icon"><i class="fa fa-home"></i>
+        </a>
+      </li>
+      <li class="dropdown" *ngFor="let menu of menus">
+        <a href="#"  data-toggle="dropdown" role="button"
           aria-expanded="true">
-          <span class="nav-label" routerLink={{menu.path}}>{{menu.MenuName}}</span> <span class="caret"></span></a>
-        <ul class="dropdown-menu" *ngFor="let sub of menu.Pages">
-          <li><a href="#">{{sub.PageName}}</a></li>
-        </ul>
+          <span class="nav-label" routerLink={{menu.path}}>{{menu.MenuName}}</span> <i [ngClass]="getClass(menu.MenuName)"  style="padding-left: 5px;"></i>
+        </a>
+          <ng-container *ngIf="menu.MenuName=='Product'">
+            <ul class="dropdown-menu">
+              <li *ngFor="let sub of menu.Pages">
+                <a href="#">{{sub.PageName}}</a>
+                <ul class="sub-items">
+                  <li *ngFor="let submenu of sub.Pages">
+                    <a href="#" class="nav-link">
+                      {{submenu.SubPageName}}
+                    </a>
+                  </li>
+                 </ul>
+              </li>
+            </ul>
+          </ng-container>
       </li>
     </ul>
   </div>
@@ -30,11 +46,6 @@
   <span class="opennav" style="font-size:30px;cursor:pointer" (click)="openNav()">&#9776;</span>
   <!--logo for mobile-->
   <a class="nav-link mob-logo" href="#"><img src="assets\images\reckon.jpg" alt="logo"></a>
-  <!--button for mobile
-  <div class="button-container">
-    <a href=""><button type="button" class="btn btn-primary">Want to buy</button></a>
-    <a href=""><button type="button" class="btn btn-primary">Want to learn</button></a>
-  </div>-->
   <!--end menu bar for mobile-->
 </nav>
 <!--menu for desktop-->
@@ -53,25 +64,21 @@
         </a>
         <ng-container *ngIf="menu.MenuName=='Product'">
           <ul class="bg-light">
-          <li *ngFor="let sub of menu.Pages">
-            <a href="#" class="nav-link sub-size">
+            <li *ngFor="let sub of menu.Pages">
+              <a href="#" class="nav-link sub-size">
               {{sub.PageName}}
-            </a>
-            <ul class="sub-items">
-              <li *ngFor="let submenu of sub.Pages">
-                <a href="#" class="nav-link">
-                  {{submenu.SubPageName}}
-                </a>
-              </li>
-            </ul>
-          </li>
+              </a>
+              <ul class="sub-items">
+                <li *ngFor="let submenu of sub.Pages">
+                  <a href="#" class="nav-link">
+                    {{submenu.SubPageName}}
+                  </a>
+                </li>
+               </ul>
+            </li>
           </ul>
         </ng-container>
       </li>
     </ul>
-    <!--<div class="button-container  col-lg-2 col-md-2">
-      <button type="submit">Want to buy</button>
-      <button type="submit">Want to learn</button>
-    </div>-->
   </div>
 </nav>

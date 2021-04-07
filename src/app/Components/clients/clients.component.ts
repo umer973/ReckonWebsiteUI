@@ -34,10 +34,12 @@ export class ClientsComponent implements OnInit {
   slideConfig = {
     "slidesToShow": 4, 
     "slidesToScroll": 1,
-    "nextArrow": "<div class='nav-btn next-slide'>></div>",
-    "prevArrow": "<div class='nav-btn prev-slide'><</div>",
+    /*"nextArrow": "<div class='nav-btn next-slide'>></div>",
+    "prevArrow": "<div class='nav-btn prev-slide'><</div>",*/
+    "dots": false,
     "infinite": true,
-    "autoplay":true
+    "speed": 500,
+    "autoplay":true,
   };
   
   slickInit(e) {

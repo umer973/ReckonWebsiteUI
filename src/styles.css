@@ -109,34 +109,6 @@ body{
     color:black;
     margin-right: 2px;
   }
-  /**button-container**/
-  .second-nav .button-container{
-    text-align: center;
-  }
-  .second-nav .button-container button{
-    width: 70%;
-    padding: 5px;
-    border-radius: 23px;
-    text-transform: uppercase;
-    background-color:#1ea5df;
-    border:none;
-    color:white;
-    box-shadow: 0 10px 30px -8px rgb(0 0 0 / 16%);
-    margin-bottom: 5px;
-    font-size: 13px;
-  }
-  .second-nav .button-container .btn:focus,
-  .second-nav .button-container .btn:active
- {
-    background-color:#1ea5df;
-    border-color:#1ea5df;
-    outline: none;
-    border:none;
- }
- .mynavbar .button-container button{
-    width: auto;
-    font-size: 13px;
- }
  /*BANNER*/
 .top-banner .d-md-block,
 .top-banner .d-md-none{
@@ -308,6 +280,9 @@ body{
   margin-top: 10px;
   margin-bottom: 0px;
 }
+.fifth-section .trending_row button{
+  display: none  !important;
+}
 /*FOOTER*/
 .ftr-bottom .cpyryt{
   background-color: black;
@@ -420,6 +395,9 @@ body{
 .slick-slider {
   margin: auto;
 } 
+.slick-initialized .slick-slide{
+  margin-right: 1px;
+}
 .slick-slider .prev-slide{
   left: -3%;
 }
@@ -446,9 +424,6 @@ body{
 @media(min-width: 1025px){
   .second-nav .dsktp_logo img{
     max-width: 60%;
- }
- .second-nav .button-container{
-    justify-content: center;
  }
 }
 @media(max-width: 1024px){
@@ -608,8 +583,12 @@ body{
     font-size: 36px;
     margin-left: 50px;
   }
-  .sidenav ul li ul li a{
+  .sidenav > ul > li > ul > li > a{
     color:lightgrey;
+    font-weight: bold;
+  }
+  .sidenav .sub-items a{ 
+    color:lightgrey !important;
   }
   .sidenav .dropdown-menu{
     border: none;
