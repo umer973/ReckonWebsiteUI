@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ReckonWebsite';
-
   /*onActivate(event) {
     let scrollToTop = window.setInterval(() => {
         let pos = window.pageYOffset;

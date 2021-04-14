@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { getNumberOfCurrencyDigits } from '@angular/common';
 import { CommonService } from 'src/app/Services/common.service';
 
@@ -16,7 +16,12 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.getMenus();
   }
+  isSticky: boolean = false;
 
+  @HostListener('window:scroll', ['$event'])
+  checkScroll() {
+    this.isSticky = window.pageYOffset >= 250;
+  }
   getMenus() {
 
     this.menus = [] = this.commonService.getMenus();

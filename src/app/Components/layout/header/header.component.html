@@ -49,7 +49,7 @@
   <!--end menu bar for mobile-->
 </nav>
 <!--menu for desktop-->
-<nav class="navbar navbar-expand navbar-light second-nav">
+<nav class="navbar navbar-expand navbar-light second-nav" id="second-nav" [ngClass]="{'mat-elevation-z5' : true, 'sticky' : isSticky}">
   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
     <div class="dsktp_logo col-lg-2 col-md-2">
       <img src="assets\images\reckon.jpg" alt="logo">

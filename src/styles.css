@@ -42,8 +42,20 @@ body{
    text-align: center;
 }
 /*---NAVBAR---*/
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background: #fff;
+}
 .second-nav{
   border-bottom: 1px solid #DBDCDE;
+  /*--position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background: #fff;--*/
 }
 .second-nav .dsktp_logo{
   text-align: center;
